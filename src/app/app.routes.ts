@@ -6,9 +6,9 @@ import { EmployerLoginComponent } from './component/employer-login/employer-logi
 import { EmployerRegisterComponent } from './component/employer-register/employer-register.component';
 import { Error404Component } from './component/error-404/error-404.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
-import { JobManagementDashboardComponent } from './pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
-import { PostNewJobComponent } from './pages/JobPostPage/post-new-job/post-new-job.component';
-import { HomeComponent } from './pages/home/home.component';
+import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
+import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
+import { HomeComponent } from './Pages/home/home.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
