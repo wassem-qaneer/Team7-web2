@@ -1,0 +1,43 @@
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Featured Jobs</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4 mb-4" *ngFor="let job of jobsToShow">
+        <div class="card h-100 shadow-sm">
+          <img [src]="job.image" class="card-img-top" alt="Job Image" style="height: 200px; object-fit: cover;" />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ job.title }}</h5>
+            <p class="card-text mb-1"><strong>{{ job.company }}</strong></p>
+            <p class="card-text text-muted">{{ job.location }}</p>
+            <span class="badge bg-primary">{{ job.type }}</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 text-end">
+            <a href="#" class="btn btn-sm text-white" style="background-color: #6f42c1;">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button
+        *ngIf="visibleJobs < allJobs.length"
+        class="btn text-white px-4"
+        style="background-color: #6f42c1;"
+        (click)="showMoreJobs()"
+      >
+        Show More Jobs
+      </button>
+
+      <button
+        *ngIf="visibleJobs >= allJobs.length"
+        class="btn text-white px-4"
+        style="background-color: #6f42c1;"
+
+        (click)="showLessJobs()"
+      >
+        Show Less Jobs
+      </button>
+    </div>
+
+  </div>
+</section>
