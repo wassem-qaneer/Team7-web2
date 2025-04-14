@@ -1,0 +1,139 @@
+
+:root {
+  --primary-color: #7930d8;       
+  --secondary-color: #5a1fad;     
+  --accent-color: #7930d8;        
+  --text-color: #7930d8;           
+  --light-bg: #7930d8;            
+  --white: #7930d8;
+}
+
+
+.dashboard-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--light-bg);
+  min-height: 100vh;
+}
+
+header h1 {
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+
+.main-content {
+  flex: 1;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #7930d8(121, 48, 216, 0.1);
+}
+
+.time-display {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #7930d7;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  margin: 12px 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+
+.control-panel {
+  width: 280px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #7930d8(121, 48, 216, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.control-panel h2 {
+  background-color: var(--primary-color);
+  color: #7930d8;
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 1.3rem;
+}
+
+.control-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.control-panel li {
+  padding: 14px 20px;
+  border-bottom: 1px solid #7930d8;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-panel li:hover {
+  background-color: var(--accent-color);
+  padding-left: 25px;
+  color: var(--secondary-color);
+}
+
+.control-panel li:last-child {
+  border-bottom: none;
+}
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  
+  .control-panel {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+  .stats {
+    flex-direction: column;
+  }
+}
