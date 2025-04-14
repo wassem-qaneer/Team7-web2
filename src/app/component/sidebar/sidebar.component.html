@@ -1,0 +1,13 @@
+<nav class="sidebar-nav">
+  <h2 class="sidebar-title">Control Panel</h2>
+  <ul class="menu-list">
+    <li *ngFor="let item of menuItems">
+      <a 
+        [routerLink]="item.path" 
+        routerLinkActive="active"
+        class="menu-link">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</nav>
