@@ -1,0 +1,112 @@
+<div class="register-container">
+  <div class="form-container">
+    <h2>Create a Job Seeker Acount</h2>
+    <div class="login-link">
+      <p>You have an account?</p>
+      <a routerLink="/job-seeker-login">Log In now</a>
+    </div>
+    <form>
+      <div class="name-fields">
+        <div class="first-name">
+          <input type="text" placeholder="First Name" />
+        </div>
+        <div class="last-name">
+          <input type="text" placeholder="Last Name" />
+        </div>
+      </div>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Create a password">
+      <input type="password" placeholder="Re-enter your password">
+      <div class="dob-container">
+        <h6>Date of Birth</h6>
+        <div class="dob-selects">
+          <div class="dob-item">
+            <select id="day" name="day" [(ngModel)]="selectedDay" class="english-select">
+              <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+            </select>
+            <label for="day">Day</label>
+          </div>
+
+          <div class="dob-item">
+            <select id="month" name="month" [(ngModel)]="selectedMonth" class="english-select">
+              <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+            </select>
+            <label for="month">Month</label>
+          </div>
+
+          <div class="dob-item">
+            <select id="year" name="year" [(ngModel)]="selectedYear" class="english-select">
+              <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+            <label for="year">Year</label>
+          </div>
+        </div>
+      </div>
+      <div class="gender-container" style="margin-bottom: 10px;">
+        <h6 for="gender">Gender</h6>
+        <select>
+          <option disabled hidden>Gender</option>
+          <option value="Men">Men</option>
+          <option value="Women">Women</option>
+        </select>
+      </div>
+      <div class="country-container">
+        <h6 for="country">Country</h6>
+        <select>
+          <option>Choose Country</option>
+          <option>Palestine </option>
+          <option>Jordan</option>
+          <option>USA</option>
+          <option>Canada</option>
+          <option>Germany</option>
+          <option>Australia</option>
+          <option>France</option>
+          <option>Italy</option>
+          <option>Spain</option>
+        </select>
+      </div>
+      <div class="terms-container">
+        <input type="checkbox" id="terms" name="terms" value="agree" style="margin-right: 5px;" />
+        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        <br>
+        <input type="checkbox" id="job" name="job" value="agree" style="margin-right: 5px;" />
+        <label for="terms">I want to receive jobs</label>
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <div class="divider-with-or">
+    <span>OR</span>
+  </div>
+
+  <div class="image-container">
+    <div class="social-login-section">
+      <button class="google-btn" style="margin-top: 20px;">
+        <i class="fa-brands fa-google fa-lg"></i>
+        Sign up with Google
+      </button>
+      <button class="facebook-btn">
+        <i class="fa-brands fa-facebook fa-lg"></i>
+        Sign up with Facebook
+      </button>
+      <button class="linkedin-btn">
+        <i class="fa-brands fa-linkedin fa-lg"></i>
+        Sign up with Linkedin
+      </button>
+
+      <ul class="benefits-list">
+        <li>Apply to jobs in just a few clicks</li>
+        <li>Get job recommendations based on your profile</li>
+        <li>Track your application status easily</li>
+        <li>Receive alerts for new job matches</li>
+      </ul>
+    </div>
+    <img src="https://therecruitmentalternative.com.au/wp-content/uploads/2023/04/Help-Center2.png"
+      alt="illustration" />
+  </div>
+</div>
+<div class="footer-callout">
+  <h2>Want to Become a Success Employee?</h2>
+  <p>We'll help you to grow your career and growth.</p>
+</div>
