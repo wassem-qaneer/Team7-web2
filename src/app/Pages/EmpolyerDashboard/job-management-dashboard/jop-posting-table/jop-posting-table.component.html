@@ -1,0 +1,131 @@
+
+<div class="container" style=" ;margin-top: 6rem; ">
+
+  <h2 style="font-weight: bold; display: inline; padding-right: 2rem">Job Postings</h2>
+  <button type="button" id="btn1" class="btn btn-primary" style="margin-bottom: 8px " routerLink="/postNewJob">Post A Jop</button>
+
+
+  <div class="table-responsive-md">
+      <table class="table table-striped table-bordered table-hover" style="margin-top: 1rem">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Job Title</th>
+        <th>Company</th>
+        <th>Job Status</th>
+        <th colspan="2" style="text-align: center">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>Software Engineer</td>
+        <td>Tech Solutions</td>
+        <td>
+          <select class="form-select" aria-label="Default select example" style="max-width: 12rem">
+            <option value="1" selected>Open</option>
+            <option value="2">Close</option>
+          </select>
+        </td>
+
+        <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="edit1" >Edit</button><button type="button" class="btn btn-outline-primary" id="Delete1" >Delete</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Marketing Manager</td>
+        <td>Brand Boosters</td>
+        <td>
+          <select class="form-select" aria-label="Default select example" style="max-width: 12rem">
+            <option value="1" selected>Open</option>
+            <option value="2">Close</option>
+          </select>
+        </td>
+        <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="edit2" >Edit</button><button type="button" class="btn btn-outline-primary" id="Delete2" >Delete</button></td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Data Analyst</td>
+        <td>Data Gurus</td>
+        <td>
+          <select class="form-select" aria-label="Default select example" style="max-width: 12rem">
+            <option value="1" selected>Open</option>
+            <option value="2">Close</option>
+          </select>
+        </td>
+        <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="edit3" >Edit</button><button type="button" class="btn btn-outline-primary" id="Delete3" >Delete</button></td>
+
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Product Manager</td>
+        <td>Innovate Inc.</td>
+        <td>
+          <select class="form-select" aria-label="Default select example" style="max-width: 12rem">
+            <option value="1" selected>Open</option>
+            <option value="2">Close</option>
+          </select>
+        </td>
+        <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="edit4" >Edit</button><button type="button" class="btn btn-outline-primary" id="Delete4" >Delete</button></td>
+
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Web Developer</td>
+        <td>Code Crew</td>
+        <td>
+          <select class="form-select" aria-label="Default select example" style="max-width: 12rem">
+            <option value="1" selected>Open</option>
+            <option value="2">Close</option>
+          </select>
+        </td>
+        <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="edit5" >Edit</button><button type="button" class="btn btn-outline-primary" id="Delete5" >Delete</button></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 style="font-weight: bold; text-align: center ; margin-top:7rem ;margin-bottom: 2rem">Manage Applications</h2>
+
+ <div class="table-responsive-md">
+   <table class="table table-striped table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>Applicant name</th>
+    <th>Position applied</th>
+    <th>Application status</th>
+    <th colspan="2" style="text-align: center">Actions</th>
+  </tr>
+  </thead>
+     <tbody>
+
+     <tr>
+       <td>John Doe</td>
+       <td>Software Engineer</td>
+       <td style="color: #7930d8" >Rejected</td>
+       <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="accept1" >Accept</button><button type="button" class="btn btn-outline-primary" id="reject1" >Reject</button></td>
+
+     </tr>
+     <tr>
+       <td>Jane Smith</td>
+       <td>Data Analyst</td>
+       <td style="color: #7930d8" >Accepted</td>
+       <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="accept2" >Accept</button><button type="button" class="btn btn-outline-primary" id="reject2" >Reject</button></td>
+
+     </tr>
+     <tr>
+       <td>Alice Johnson</td>
+       <td>Graphic Designer</td>
+       <td style="color: #7930d8" >Accepted</td>
+       <td style="display: flex;gap: 20px ; justify-content: center" ><button type="button" class="btn btn-outline-primary" id="accept3" >Accept</button><button type="button" class="btn btn-outline-primary" id="reject3" >Reject</button></td>
+
+     </tr>
+     </tbody>
+   </table>
+ </div>
+
+
+
+
+</div>

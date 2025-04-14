@@ -1,0 +1,44 @@
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+  background-color: #5a22a8;
+}
+.card img  {
+
+  width: 90% ;
+  height: 200px ;
+  margin: 10px auto ;
+  border-radius: 10px;
+  object-fit: fill
+}
+
+.card h5{
+  font-weight: bold;
+
+}
+.card p.description,.card p.details {
+  opacity: 50%;
+}
+
+.card button {
+  color: #5a22a8;
+  border-color: #5a22a8 ;
+}
+
+.card button:hover {
+  background-color: #5a22a8;
+  color: white;
+  border-color: #5a22a8 ;
+}
+
+.card-body{
+  flex-direction: column;
+  display: flex;
+  gap: 3px ;
+}
+

@@ -1,0 +1,109 @@
+
+<div class="container " style=" margin-top: 6rem; ">
+
+  <h1>Post a new job</h1>
+  <p>Fill in the details below to create your job post.</p>
+  <h6>Job Title</h6>
+  <div class="form-floating mb-3">
+    <input type="Job Title" class="form-control"  placeholder="name@example.com">
+    <label  style="opacity: 50%">Job Title</label>
+  </div>
+  <h6>Job Description</h6>
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"  [(ngModel)]="jobDescription"
+              (input)="countWords()"
+              [disabled]="numOfEnteredWord >= maxWords"></textarea>
+
+    <label for="floatingTextarea2" style="opacity: 50%">Job Description</label>
+  </div>
+  <h6 style="opacity: 70%;margin-top: 10px"> {{ numOfEnteredWord }}/{{ maxWords }}</h6>
+  <h6 style="margin-top: 25px">Requirements</h6>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" >
+    <label class="form-check-label" >
+      Bachelor's Degree    </label>
+
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" >
+    <label class="form-check-label" >
+      Master's Degree    </label>
+
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" >
+    <label class="form-check-label" >
+      PhD    </label>
+
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" >
+    <label class="form-check-label" >
+      Certificate    </label>
+
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="toggleInput" [(ngModel)]="isChecked">
+    <label class="form-check-label">
+      Major in related field
+    </label>
+  </div>
+
+  <div class="form-floating mb-3 " *ngIf="isChecked" style="margin-top: 15px">
+    <input class="form-control" placeholder="name@example.com">
+    <label  style="opacity: 50%;">Add your own requirement</label>
+  </div>
+
+  <h6 style="margin-top: 20px" >Salary</h6>
+
+<div class="fourInputs" style=" display: flex;  gap: 20px">
+
+  <div class="form-floating mb-1" id="above1" style=" width: 40%">
+
+    <input  class="form-control"   placeholder="name@example.com" style=" " >
+      <label  style="opacity: 50%" >Add a salary figure</label>
+  </div>
+
+
+    <div class="form-floating mb-1" style="">
+
+    <input  class="form-control"  placeholder="name@example.com" style=" " >
+      <label  style="opacity: 50%;" class="above">Frequency</label>
+    </div>
+
+    <div class="form-floating mb-1">
+        <input  class="form-control" placeholder="name@example.com"  style=" " >
+        <label  style="opacity: 50%" class="above">Type</label>
+  </div>
+
+    <div class="form-floating mb-1">
+      <input  class="form-control" placeholder="name@example.com"  style=" " >
+      <label  style="opacity: 50%" class="above">Currency</label>
+  </div>
+
+  </div>
+
+
+
+  <h6 style="margin-top: 20px">Location</h6>
+  <div class="form-floating mb-3">
+    <input  class="form-control"  placeholder="name@example.com">
+    <label  style="opacity: 50%">Add a location</label>
+  </div>
+  <h6 style="margin-top: 20px">Upload Company Logo</h6>
+  <div class="d-grid gap-2" style="margin-top: 10px">
+    <button class="btn btn-primary" id="my-btn" style="background-color: #7930d8;border-color: #7930d8;  "type="button">Upload</button>
+  </div>
+  <h6 style="opacity: 70%;margin-top: 10px">JPG, PNG, GIF (Max 2MB)</h6>
+
+  <h6 style="margin-top: 20px">Upload Related Documents</h6>
+  <div class="d-grid gap-2" style="margin-top: 10px">
+    <button class="btn btn-primary" id="my-btn1" style="background-color: #7930d8;border-color: #7930d8;  "type="button">Upload</button>
+  </div>
+  <h6 style="opacity: 70%;margin-top: 10px;margin-bottom: 100px">PDF, DOC, PPT (Max 5MB)</h6>
+
+
+</div>
+
+
+
