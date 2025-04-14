@@ -1,0 +1,86 @@
+<div class="form-container">
+  <h2>Create a New Employer Account</h2>
+  <div class="login-link">
+    <p>You have an account?</p>
+    <a routerLink="/job-seeker-login">Log In now</a>
+  </div>
+  <hr style="display: block
+  ; color: #6a1b9a;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-sections">
+      <div class="section">
+        <h3>Account Manager Info</h3>
+        <input type="text" placeholder="First Name" [(ngModel)]="account.firstName" name="firstName" required>
+        <input type="text" placeholder="Last Name" [(ngModel)]="account.lastName" name="lastName" required>
+        <input type="text" placeholder="Job Title" [(ngModel)]="account.jobTitle" name="jobTitle">
+        <input type="email" placeholder="Email" [(ngModel)]="account.email" name="email" required>
+        <input type="password" placeholder="Password" [(ngModel)]="account.password" name="password" required>
+        <input type="password" placeholder="Confirm Password" [(ngModel)]="account.confirmPassword"
+          name="confirmPassword" required>
+      </div>
+
+      <div class="section">
+        <h3>Company Info</h3>
+        <input type="text" placeholder="Company Name" [(ngModel)]="account.companyName" name="companyName" required>
+
+        <select [(ngModel)]="account.country" name="country" required>
+          <option value="" disabled selected hidden>Country</option>
+          <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+        </select>
+
+        <select [(ngModel)]="account.city" name="city" required>
+          <option value="" disabled selected hidden>City</option>
+          <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+        </select>
+
+        <select [(ngModel)]="account.type" name="type" required>
+          <option value="" disabled selected hidden>Company Type</option>
+          <option *ngFor="let type of companyTypes" [value]="type">{{ type }}</option>
+        </select>
+
+        <select [(ngModel)]="account.sector" name="sector" required>
+          <option value="" disabled selected hidden>Company Sector</option>
+          <option *ngFor="let sector of companySectors" [value]="sector">{{ sector }}</option>
+        </select>
+
+        <select [(ngModel)]="account.size" name="size" required>
+          <option value="" disabled selected hidden>Company Size</option>
+          <option *ngFor="let size of companySizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <label>
+        Preferred Language:
+        <select [(ngModel)]="account.preferredLanguage" name="preferredLanguage">
+          <option value="Arabic">Arabic</option>
+          <option value="English">English</option>
+        </select>
+      </label>
+      <div class="section">
+        <label for="file-upload" class="custom-file-upload">
+          Upload Company Logo
+        </label>
+        <input type="file" id="file-upload" [(ngModel)]="account.logo" name="logo" accept="image/*" hidden>
+      </div>
+    </div>
+    <div class="terms-container">
+      <label class="term-item">
+        <input type="checkbox" name="terms" required>
+        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+      </label>
+      <label class="term-item">
+        <input type="checkbox" name="job">
+        <span>I want to receive Emails</span>
+      </label>
+    </div>
+    <button type="submit">Create Account</button>
+  </form>
+</div>
+
+<div class="footer-callout">
+  <h2>Are you looking for highly qualified employees?</h2>
+  <p>We will help you find the best talents and minds here.</p>
+</div>
