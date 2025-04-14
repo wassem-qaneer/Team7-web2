@@ -8,9 +8,10 @@ import { Error404Component } from './component/error-404/error-404.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { JobManagementDashboardComponent } from './pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
 import { PostNewJobComponent } from './pages/JobPostPage/post-new-job/post-new-job.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: Error404Component },
+  { path: '', component: HomeComponent },
   { path: 'job-seeker-register', component: JobSeekerRegisterComponent },
   { path: 'job-seeker-login', component: JobSeekerLoginComponent },
   { path: 'employer-register', component: EmployerRegisterComponent },
@@ -22,4 +23,5 @@ export const routes: Routes = [
     component: JobManagementDashboardComponent,
   },
   { path: 'postNewJob', component: PostNewJobComponent },
+  { path: '**', component: Error404Component },
 ];
