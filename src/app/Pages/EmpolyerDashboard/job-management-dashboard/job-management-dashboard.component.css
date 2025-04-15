@@ -1,0 +1,69 @@
+* {
+  font-family: roboto, serif;
+}
+
+.container1 {
+  text-align: center;
+  margin-top: 2rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 10rem;
+  align-items: center;
+
+
+
+}
+
+.item1, .item2, .item3 {
+  height: 7rem;
+  width: 23rem;
+  position: relative;
+  text-align: center;
+
+
+}
+.icon{
+  left: 1.6rem;
+  top: 1rem;
+  position: absolute;
+}
+
+.four-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .four-cards {
+    flex-direction: column;
+  }
+
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+
+  .container1{
+    margin-top:4rem;
+
+  }
+
+}

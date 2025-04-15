@@ -1,0 +1,54 @@
+*{
+  font-family:roboto;
+}
+
+.container h1{
+  font-weight: bold;
+
+}
+.container p{
+  opacity: 75%;
+  margin-top: 20px;
+}
+input[type=checkbox]:checked{
+  background-color: #7930d8;
+  border-color: #7930d8;
+}
+
+
+#toggleInput:checked + #hiding {
+  display: block;
+}
+
+#my-btn {
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+#my-btn:hover {
+  background-color: #5a22a8 !important;
+  border-color: #5a22a8 !important;
+}
+
+#my-btn1 {
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+#my-btn1:hover {
+  background-color: #5a22a8 !important;
+  border-color: #5a22a8 !important;
+}
+
+
+@media (max-width: 768px) {
+.fourInputs{
+  flex-direction: column;
+}
+  #above1{
+    min-width: 100%;
+  }
+
+}
+
+
+
+
