@@ -1,0 +1,30 @@
+.notifications {
+    padding: 20px;
+  }
+  
+  .dismiss-all {
+    background-color: #7930d8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    background-color: #7930d8;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-top: 1px solid #7930d8;
+  }
+  
