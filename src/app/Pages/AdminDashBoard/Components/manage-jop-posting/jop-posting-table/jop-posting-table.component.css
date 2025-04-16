@@ -1,5 +1,5 @@
 #btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11 {
-background-color: #7930d8 ;
+  background-color: #7930d8 ;
   border-color: #7930d8 ;
 
 }
@@ -38,13 +38,13 @@ th, td {
   text-align: center;
 }
 
-#edit1,#edit2,#edit3,#edit4,#edit5{
+#edit1,#edit2,#edit3,#edit4,#edit5,#button-addon2{
   color: #7930d8 ;
   background-color: #f7f2fd;
   border-color: #f7f2fd ;
 }
 
-#edit1:hover,#edit2:hover,#edit3:hover,#edit4:hover,#edit5:hover{
+#edit1:hover,#edit2:hover,#edit3:hover,#edit4:hover,#edit5:hover,#button-addon2:hover{
   background-color: #7930d8 ;
   color: white ;
 }

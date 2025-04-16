@@ -12,6 +12,13 @@ import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { Sign } from 'crypto';
 import { SignupComponent } from './Pages/signup/signup.component';
+import {SideBarComponent} from './Pages/AdminDashBoard/Components/side-bar/side-bar.component';
+import {AnalyticsComponent} from './Pages/AdminDashBoard/Components/analytics/analytics.component';
+import {
+  ManageJopPostingComponent
+} from './Pages/AdminDashBoard/Components/manage-jop-posting/manage-jop-posting.component';
+import {ReportsComponent} from './Pages/AdminDashBoard/Components/reports/reports.component';
+import {ManageUsersComponent} from './Pages/AdminDashBoard/Components/manage-users/manage-users.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,5 +35,10 @@ export const routes: Routes = [
     component: JobManagementDashboardComponent,
   },
   { path: 'postNewJob', component: PostNewJobComponent },
+  {path: 'Analytics' ,component:AnalyticsComponent},
+  {path: 'ManageJopPosting' ,component:ManageJopPostingComponent},
+  {path: 'ManageUsers' ,component:ManageUsersComponent},
+  {path: 'Reports' ,component:ReportsComponent},
+
   { path: '**', component: Error404Component },
 ];
