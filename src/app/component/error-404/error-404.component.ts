@@ -13,58 +13,60 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [`
-    .wrapper {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f9f6ff;
-    }
+  styles: [
+    `
+      .wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f6ff;
+      }
 
-    .error-container {
-      text-align: center;
-      background-color: white;
-      padding: 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(133, 105, 183, 0.2);
-      width: 80%;
-      max-width: 900px;
-    }
+      .error-container {
+        text-align: center;
+        background-color: white;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(133, 105, 183, 0.2);
+        width: 80%;
+        max-width: 900px;
+      }
 
-    .error-title {
-      font-size: 180px;
-      color: #8e24aa;
-      margin: 0;
-    }
+      .error-title {
+        font-size: 180px;
+        color: #6f42c1;
+        margin: 0;
+      }
 
-    .error-container h2 {
-      font-size: 36px;
-      color: #6a1b9a;
-      margin-bottom: 20px;
-    }
+      .error-container h2 {
+        font-size: 36px;
+        color: #6f42c1;
+        margin-bottom: 20px;
+      }
 
-    .error-container p {
-      color: #333;
-      font-size: 20px;
-    }
+      .error-container p {
+        color: #333;
+        font-size: 20px;
+      }
 
-    button {
-      background-color: #8e24aa;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
+      button {
+        background-color: #6f42c1;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
 
-    button:hover {
-      background-color: #6a1b9a;
-    }
-  `]
+      button:hover {
+        background-color: #6f42c1;
+      }
+    `,
+  ],
 })
 export class Error404Component {
   goToHomepage() {

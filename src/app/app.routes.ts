@@ -9,6 +9,9 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { LoginComponent } from './Pages/login/login.component';
+import { Sign } from 'crypto';
+import { SignupComponent } from './Pages/signup/signup.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +21,8 @@ export const routes: Routes = [
   { path: 'employer-login', component: EmployerLoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
