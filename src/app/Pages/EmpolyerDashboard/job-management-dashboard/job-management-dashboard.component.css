@@ -9,8 +9,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
-
 }
 
 .container2 {
@@ -19,9 +17,6 @@
   justify-content: space-evenly;
   min-height: 10rem;
   align-items: center;
-
-
-
 }
 
 .item1, .item2, .item3 {
@@ -29,10 +24,9 @@
   width: 23rem;
   position: relative;
   text-align: center;
-
-
 }
-.icon{
+
+.icon {
   left: 1.6rem;
   top: 1rem;
   position: absolute;
@@ -45,12 +39,10 @@
   align-items: center;
 }
 
-
 @media screen and (max-width: 768px) {
   .four-cards {
     flex-direction: column;
   }
-
 
   .container2 {
     display: flex;
@@ -60,10 +52,170 @@
     gap: 1rem;
   }
 
+  .container1 {
+    margin-top: 4rem;
+  }
+}
 
-  .container1{
-    margin-top:4rem;
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9, #btn10, #btn11 {
+  background-color: #7930d8;
+  border-color: #7930d8;
+}
 
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover, #btn11:hover {
+  background-color: #5a22a8 !important;
+  border-color: #5a22a8 !important;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover, #btn11:hover {
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+.table-responsive-md {
+  width: 100%;
+}
+
+.table {
+  margin-top: 1rem;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.action-btn {
+  min-width: 6rem;
+  text-align: center;
+}
+
+#edit1, #edit2, #edit3, #edit4, #edit5 {
+  color: #7930d8;
+  background-color: #f7f2fd;
+  border-color: #f7f2fd;
+}
+
+#edit1:hover, #edit2:hover, #edit3:hover, #edit4:hover, #edit5:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+#Delete1, #Delete2, #Delete3, #Delete4, #Delete5, #reject1, #reject2, #reject3 {
+  border-color: #7930d8;
+  color: #7930d8;
+}
+
+#Delete1:hover, #Delete2:hover, #Delete3:hover, #Delete4:hover, #Delete5:hover, #reject1:hover, #reject2:hover, #reject3:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+#accept1, #accept2, #accept3 {
+  color: #7930d8;
+  background-color: #f7f2fd;
+  border-color: #f7f2fd;
+}
+
+#accept1:hover, #accept2:hover, #accept3:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .form-select {
+    max-width: 100%;
   }
 
+  .action-btn button {
+    width: 100%;
+    margin: 2px 0;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal.d-block {
+  display: block;
+}
+
+.modal-dialog {
+  max-width: 800px; /* Increased width for wider content */
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header, .modal-footer {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.5;
+  padding-left: 37rem;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+/* Horizontal Checkbox Layout */
+.d-flex.flex-wrap.gap-3 .form-check {
+  margin-right: 20px; /* Space between checkboxes */
+}
+
+.d-flex.flex-wrap.gap-3 .form-check:last-child {
+  margin-right: 0;
+}
+
+/* Ensure buttons have consistent purple color */
+.btn-primary {
+  background-color: #7930d8 !important;
+  border-color: #7930d8 !important;
+}
+
+.btn-primary:hover {
+  background-color: #5a22a8 !important;
+  border-color: #5a22a8 !important;
+}
+
+.btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.btn-secondary:hover {
+  background-color: #5c636a !important;
+  border-color: #5c636a !important;
+}
+input[type=checkbox]:checked {
+  background-color: #7930d8;
+  border-color: #7930d8;
 }
