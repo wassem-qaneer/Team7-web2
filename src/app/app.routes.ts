@@ -7,11 +7,13 @@ import { EmployerRegisterComponent } from './component/employer-register/employe
 import { Error404Component } from './component/error-404/error-404.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
-import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
-import { Sign } from 'crypto';
 import { SignupComponent } from './Pages/signup/signup.component';
+import { JobChartComponent } from './component/job-chart/job-chart.component';
+import { MySaveJobComponent } from './component/my-save-job/my-save-job.component';
+import { NotificationsComponent } from './component/notifications/notifications.component';
+import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,6 +29,10 @@ export const routes: Routes = [
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
   },
-  { path: 'postNewJob', component: PostNewJobComponent },
+  { path: 'PostNewJob', component: PostNewJobComponent },
+  { path: 'savedjob', component: MySaveJobComponent },
+  { path: 'noto', component: NotificationsComponent },
+  { path: 'JobChartComponent', component: JobChartComponent },
   { path: '**', component: Error404Component },
 ];
+
