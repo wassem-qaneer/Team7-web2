@@ -9,6 +9,8 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { AppliedJobsComponent } from './component/applied-jobs/applied-jobs.component';
+import { ProfileComponent } from './component/Profile/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,10 +20,16 @@ export const routes: Routes = [
   { path: 'employer-login', component: EmployerLoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: '', redirectTo: 'profile', pathMatch: 'full' },
+  { path: 'profile', component: ProfileComponent },
   {
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
   },
   { path: 'postNewJob', component: PostNewJobComponent },
+  {
+    path: 'Applied-job',
+    component: AppliedJobsComponent
+  },
   { path: '**', component: Error404Component },
 ];

@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-5">Applied Jobs Overview</h2>
+  
+    <div class="row g-4">
+      <div
+        class="col-md-4"
+        *ngFor="let job of jobs"
+      >
+        <app-job-card [job]="job"></app-job-card>
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button class="btn btn-purple px-4">Show More</button>
+    </div>
+  </div>
+  

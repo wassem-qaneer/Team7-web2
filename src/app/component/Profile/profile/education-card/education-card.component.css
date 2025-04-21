@@ -1,0 +1,26 @@
+.btn-purple {
+    background-color: purple;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-purple:hover {
+    background-color: #6a0dad; /* darker purple */
+    box-shadow: 0 4px 8px rgba(106, 13, 173, 0.4);
+    transform: translateY(-1px);
+  }
+  /* education-card.component.css */
+
+/* This targets the image directly */
+img {
+  border-radius: 8px;
+  max-height: 100px;
+  object-fit: cover;
+  width: 100%; /* Ensures it fits its container */
+}
+
+/* Optional: Constrain the column size as in experience cards */
+.col-3 {
+  max-width: 150px;
+}
