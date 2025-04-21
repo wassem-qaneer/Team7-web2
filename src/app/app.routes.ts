@@ -7,10 +7,8 @@ import { EmployerRegisterComponent } from './component/employer-register/employe
 import { Error404Component } from './component/error-404/error-404.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
-import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
-import { Sign } from 'crypto';
 import { SignupComponent } from './Pages/signup/signup.component';
 import {SideBarComponent} from './Pages/AdminDashBoard/Components/side-bar/side-bar.component';
 import {AnalyticsComponent} from './Pages/AdminDashBoard/Components/analytics/analytics.component';
@@ -20,8 +18,16 @@ import {
 import {ReportsComponent} from './Pages/AdminDashBoard/Components/reports/reports.component';
 import {ManageUsersComponent} from './Pages/AdminDashBoard/Components/manage-users/manage-users.component';
 
+import { JobChartComponent } from './component/job-chart/job-chart.component';
+import { NotificationsComponent } from './component/notifications/notifications.component';
+import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
+import { JobComponent } from './Pages/job/job.component';
+import { TrackingComponent } from './Pages/tracking/tracking.component';
+
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'my-job', component: JobComponent },
+  { path: 'track', component: TrackingComponent },
   { path: 'job-seeker-register', component: JobSeekerRegisterComponent },
   { path: 'job-seeker-login', component: JobSeekerLoginComponent },
   { path: 'employer-register', component: EmployerRegisterComponent },
@@ -34,11 +40,17 @@ export const routes: Routes = [
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
   },
+
   { path: 'postNewJob', component: PostNewJobComponent },
   {path: 'Analytics' ,component:AnalyticsComponent},
   {path: 'ManageJopPosting' ,component:ManageJopPostingComponent},
   {path: 'ManageUsers' ,component:ManageUsersComponent},
   {path: 'Reports' ,component:ReportsComponent},
+
+
+
+  { path: 'noto', component: NotificationsComponent },
+  { path: 'JobChartComponent', component: JobChartComponent },
 
   { path: '**', component: Error404Component },
 ];
