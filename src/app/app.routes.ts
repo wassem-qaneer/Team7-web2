@@ -35,4 +35,3 @@ export const routes: Routes = [
   { path: 'JobChartComponent', component: JobChartComponent },
   { path: '**', component: Error404Component },
 ];
-
