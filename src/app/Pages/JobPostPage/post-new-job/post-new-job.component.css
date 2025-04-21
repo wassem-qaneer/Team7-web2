@@ -1,54 +1,71 @@
-*{
-  font-family:roboto;
+* {
+  font-family: Roboto, sans-serif;
 }
 
-.container h1{
+.container h1 {
   font-weight: bold;
-
 }
-.container p{
+
+.container p {
   opacity: 75%;
   margin-top: 20px;
 }
-input[type=checkbox]:checked{
+
+
+input[type=checkbox]:checked {
   background-color: #7930d8;
   border-color: #7930d8;
 }
 
 
-#toggleInput:checked + #hiding {
-  display: block;
-}
-
-#my-btn {
+button {
+  background-color: #7930d8;
+  border-color: #7930d8;
   transition: background-color 0.3s ease, border-color 0.3s ease !important;
 }
 
-#my-btn:hover {
+button:hover {
   background-color: #5a22a8 !important;
   border-color: #5a22a8 !important;
-}
-
-#my-btn1 {
-  transition: background-color 0.3s ease, border-color 0.3s ease !important;
-}
-
-#my-btn1:hover {
-  background-color: #5a22a8 !important;
-  border-color: #5a22a8 !important;
+  color: white;
 }
 
 
 @media (max-width: 768px) {
-.fourInputs{
-  flex-direction: column;
-}
-  #above1{
-    min-width: 100%;
+  .fourInputs {
+    flex-direction: column;
   }
 
+  .fourInputs > div {
+    width: 100% !important;
+  }
+}
+
+.text-danger {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
-
-
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0px); }
+}

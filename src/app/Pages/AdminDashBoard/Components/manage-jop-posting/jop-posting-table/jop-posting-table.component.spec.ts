@@ -8,7 +8,7 @@ describe('JopPostingTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [JopPostingTableComponent]
+      imports: [JopPostingTableComponent]
     })
     .compileComponents();
 
