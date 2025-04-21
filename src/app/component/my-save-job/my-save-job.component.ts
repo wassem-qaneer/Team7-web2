@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // @ts-ignore
@@ -9,6 +10,7 @@ interface Job {
   applications: number;
   image: string;
 }
+
 
 @Component({
   selector: 'app-my-save-job',
@@ -27,20 +29,24 @@ export class MySaveJobComponent implements OnInit {
   }
 
   visibleCount = 3;
+
   get visibleJobs() {
     return this.jobs.slice(0, this.visibleCount);
   }
 
   showMore() {
     this.visibleCount = this.jobs.length;
+
   }
 
   get allJobsShown() {
     return this.visibleCount >= this.jobs.length;
   }
 
+
   remove(index: number) {
     this.jobs.splice(index, 1);
+
     if (this.visibleCount > this.jobs.length) {
       this.visibleCount = this.jobs.length;
     }
