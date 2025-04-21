@@ -22,4 +22,6 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 })
 export class AppComponent {
   title = 'team7-web2';
+
+
 }

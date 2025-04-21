@@ -1,4 +1,3 @@
-
 import { Routes } from '@angular/router';
 import { JobSeekerLoginComponent } from './component/job-seeker-login/job-seeker-login.component';
 import { JobSeekerRegisterComponent } from './component/job-seeker-register/job-seeker-register.component';
@@ -11,17 +10,24 @@ import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-m
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { SignupComponent } from './Pages/signup/signup.component';
+import {SideBarComponent} from './Pages/AdminDashBoard/Components/side-bar/side-bar.component';
+import {AnalyticsComponent} from './Pages/AdminDashBoard/Components/analytics/analytics.component';
+import {
+  ManageJopPostingComponent
+} from './Pages/AdminDashBoard/Components/manage-jop-posting/manage-jop-posting.component';
+import {ReportsComponent} from './Pages/AdminDashBoard/Components/reports/reports.component';
+import {ManageUsersComponent} from './Pages/AdminDashBoard/Components/manage-users/manage-users.component';
+
 import { JobChartComponent } from './component/job-chart/job-chart.component';
-import { MySaveJobComponent } from './component/my-save-job/my-save-job.component';
 import { NotificationsComponent } from './component/notifications/notifications.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
-import {JobComponent} from './Pages/job/job.component';
-import {TrackingComponent} from './Pages/tracking/tracking.component';
+import { JobComponent } from './Pages/job/job.component';
+import { TrackingComponent } from './Pages/tracking/tracking.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path: 'my-job', component: JobComponent},
-  {path: 'my-job', component: TrackingComponent},
+  { path: 'my-job', component: JobComponent },
+  { path: 'track', component: TrackingComponent },
   { path: 'job-seeker-register', component: JobSeekerRegisterComponent },
   { path: 'job-seeker-login', component: JobSeekerLoginComponent },
   { path: 'employer-register', component: EmployerRegisterComponent },
@@ -34,9 +40,17 @@ export const routes: Routes = [
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
   },
-  { path: 'PostNewJob', component: PostNewJobComponent },
-  { path: 'savedjob', component: MySaveJobComponent },
+
+  { path: 'postNewJob', component: PostNewJobComponent },
+  {path: 'Analytics' ,component:AnalyticsComponent},
+  {path: 'ManageJopPosting' ,component:ManageJopPostingComponent},
+  {path: 'ManageUsers' ,component:ManageUsersComponent},
+  {path: 'Reports' ,component:ReportsComponent},
+
+
+
   { path: 'noto', component: NotificationsComponent },
   { path: 'JobChartComponent', component: JobChartComponent },
+
   { path: '**', component: Error404Component },
 ];
