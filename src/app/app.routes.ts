@@ -11,12 +11,15 @@ import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { SignupComponent } from './Pages/signup/signup.component';
 import { JobChartComponent } from './component/job-chart/job-chart.component';
-import { MySaveJobComponent } from './component/my-save-job/my-save-job.component';
 import { NotificationsComponent } from './component/notifications/notifications.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
+import { JobComponent } from './Pages/job/job.component';
+import { TrackingComponent } from './Pages/tracking/tracking.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'my-job', component: JobComponent },
+  { path: 'track', component: TrackingComponent },
   { path: 'job-seeker-register', component: JobSeekerRegisterComponent },
   { path: 'job-seeker-login', component: JobSeekerLoginComponent },
   { path: 'employer-register', component: EmployerRegisterComponent },
@@ -30,7 +33,6 @@ export const routes: Routes = [
     component: JobManagementDashboardComponent,
   },
   { path: 'PostNewJob', component: PostNewJobComponent },
-  { path: 'savedjob', component: MySaveJobComponent },
   { path: 'noto', component: NotificationsComponent },
   { path: 'JobChartComponent', component: JobChartComponent },
   { path: '**', component: Error404Component },
