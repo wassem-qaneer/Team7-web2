@@ -12,9 +12,13 @@ import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { Sign } from 'crypto';
 import { SignupComponent } from './Pages/signup/signup.component';
+import {JobComponent} from './Pages/job/job.component';
+import {TrackingComponent} from './Pages/tracking/tracking.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  {path: 'save-job', component:JobComponent},
+  {path: 'tracking', component:TrackingComponent},
   { path: 'job-seeker-register', component: JobSeekerRegisterComponent },
   { path: 'job-seeker-login', component: JobSeekerLoginComponent },
   { path: 'employer-register', component: EmployerRegisterComponent },
