@@ -9,6 +9,8 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +24,11 @@ export const routes: Routes = [
     path: 'JobManagementDashboard',
     component: JobManagementDashboardComponent,
   },
+  
+    
+  
   { path: 'postNewJob', component: PostNewJobComponent },
   { path: '**', component: Error404Component },
+  { path: 'dashboard', component: DashboardComponent },
+
 ];
