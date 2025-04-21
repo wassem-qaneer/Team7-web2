@@ -1,0 +1,36 @@
+.sidebar-nav {
+  background-color: var(--dark);
+  color: var(--white);
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  color: var(--light);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  margin-bottom: 0.5rem;
+}
+
+.menu-link:hover {
+  background-color: #7930d8(255, 255, 255, 0.1);
+}
+
+.menu-link.active {
+  background-color: var(--primary);
+  color: var(--white);
+}

@@ -1,0 +1,69 @@
+<div class="hero-container position-relative">
+  <img src="assests/pic1.png" class="hero-background" alt="Background Image" />
+  <div class="container position-relative z-1">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center hero-content">
+        <h1 class="display-5 fw-bold text-light-gray">Track Your Applications</h1>
+        <p class="lead text-light-gray">Stay organized and monitor your job applications effortlessly.</p>
+        <a class="btn btn-primary btn-lg mt-3" href="#">Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Application History</h2>
+  <div class="table-responsive">
+    <table class="table text-center">
+      <thead>
+      <tr>
+        <th>Job Title</th>
+        <th>Applications</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let job of jobs">
+        <td>{{ job.title }}</td>
+        <td>{{ job.applications }}</td>
+        <td>
+            <span
+              [ngClass]="{
+                'text-success': job.status === 'Open',
+                'text-danger': job.status === 'Closed',
+                'text-warning': job.status === 'In Progress'
+              }"
+            >
+              {{ job.status }}
+            </span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Application Status</h2>
+  <div class="row gy-4">
+    <div class="col-12 col-md-6" *ngFor="let job of jobs">
+      <div class="status-item d-flex gap-3">
+        <span
+          class="status-circle"
+          [ngClass]="{
+            'bg-success': job.status === 'Open',
+            'bg-danger': job.status === 'Closed',
+            'bg-warning': job.status === 'In Progress'
+          }"
+        ></span>
+        <div>
+          <strong>Application:</strong> {{ job.title }}<br />
+          Status: {{ job.status }}<br />
+          Status Update: {{ job.applications }} days ago<br />
+          <a href="#" class="view-link">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

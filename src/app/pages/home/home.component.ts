@@ -5,6 +5,7 @@ import { JobListingsComponent } from '../../component/job-listings/job-listings.
 import { JobSearchComponent } from '../../component/job-search/job-search.component';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   imports: [EmployerBenefitsComponent,ContactUsComponent,JobListingsComponent,JobSearchComponent,RouterModule],
