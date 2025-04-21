@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { JobSeekerLoginComponent } from './component/job-seeker-login/job-seeker-login.component';
 import { JobSeekerRegisterComponent } from './component/job-seeker-register/job-seeker-register.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
