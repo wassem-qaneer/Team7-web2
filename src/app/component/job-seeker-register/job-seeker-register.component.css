@@ -1,3 +1,4 @@
+/* ======== Main Container ======== */
 .register-container {
   display: flex;
   justify-content: space-between;
@@ -5,11 +6,37 @@
   padding: 40px;
   max-width: 1200px;
   margin: auto;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #6f42c1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .form-container {
   flex: 1;
   max-width: 500px;
+}
+
+.image-container img {
+  width: 400px;
+  max-width: 100%;
+}
+
+/* ======== Form Fields ======== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
 .name-fields {
@@ -27,32 +54,7 @@
   min-width: 200px;
 }
 
-@media (max-width: 600px) {
-
-  .first-name,
-  .last-name {
-    flex: 1 1 100%;
-  }
-
-  .register-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input {
-  margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
+/* ======== Select & Date of Birth ======== */
 select {
   padding: 12px;
   border-radius: 6px;
@@ -66,7 +68,7 @@ select {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="%236a0dad" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%236f42c1' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px 16px;
@@ -74,87 +76,17 @@ select {
 
 select:focus {
   outline: none;
-  border-color: #6a0dad;
-  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.1);
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
 }
 
-option {
-  padding: 10px;
-  font-size: 14px;
-  background-color: #fff;
-  color: #333;
+.dob-selects select:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.15);
+  outline: none;
 }
 
-button {
-  padding: 12px;
-  background-color: #6900c7;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  background-color: #8400ff;
-  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.2);
-}
-
-.image-container img {
-  width: 400px;
-  max-width: 100%;
-}
-
-.login-link {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
-}
-
-.login-link p {
-  margin: 0;
-  font-size: 15px;
-  color: #333;
-}
-
-.login-link a {
-  color: #6a0dad;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.login-link a:hover {
-  text-decoration: underline;
-}
-
-.dob-container {
-  direction: rtl;
-  margin-bottom: 20px;
-}
-
-.dob-container label {
-  margin-right: 10px;
-}
-
-h6 {
-  display: block;
-  margin-bottom: 8px;
-  color: #333;
-  font-size: 15px;
-  text-align: left;
-}
-
-.dob-selects {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 10px;
-}
-
+/* ======== Gender, Country, Terms ======== */
 .gender-container, .country-container {
   margin-bottom: 20px;
   display: flex;
@@ -178,7 +110,7 @@ h6 {
 }
 
 .terms-container a {
-  color: #6a0dad;
+  color: #6f42c1;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
@@ -188,30 +120,70 @@ h6 {
   text-decoration: underline;
 }
 
-.dob-selects select {
-  width: 50%;
-  padding: 5px 1px;
+/* ======== Button ======== */
+button {
+  padding: 12px;
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #6f42c1;
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
+}
+
+/* ======== Login Link ======== */
+.login-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.login-link p {
+  margin: 0;
   font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  background-color: #f9f9f9;
-  min-width: 110px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s, box-shadow 0.3s;
-  appearance: none;
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 16px 16px;
+  color: #333;
 }
 
-.dob-selects select:focus {
-  border-color: #6a0dad;
-  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.15);
-  outline: none;
+.login-link a {
+  color: #6f42c1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
 }
 
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ======== Divider ======== */
+.divider-with-or {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.divider-with-or span {
+  border-radius: 50%;
+  padding: 10px 12px;
+  background-color: #6f42c1;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ======== Footer Callout ======== */
 .footer-callout {
-  background: linear-gradient(20deg, #600d9b, #9b0bbf);
+  background: linear-gradient(20deg, #6f42c1, #6f42c1);
   color: white;
   padding: 50px 20px;
   text-align: center;
@@ -230,6 +202,7 @@ h6 {
   margin: 0;
 }
 
+/* ======== Social Login ======== */
 .social-login-section {
   margin-bottom: 30px;
   display: flex;
@@ -280,6 +253,7 @@ h6 {
   height: 20px;
 }
 
+/* ======== Benefits List ======== */
 .benefits-list {
   margin-top: 10px;
   padding-left: 20px;
@@ -292,37 +266,64 @@ h6 {
   list-style: disc;
 }
 
-.divider-with-or {
+/* ======== Date of Birth Section ======== */
+.dob-container {
+  direction: rtl;
+  margin-bottom: 20px;
+}
+
+.dob-container label {
+  margin-right: 10px;
+}
+
+h6 {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+  text-align: left;
+}
+
+.dob-selects {
   display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 30px 0;
+  flex-direction: row-reverse;
+  gap: 10px;
 }
 
-.divider-with-or span {
-  border-radius: 50%;
-  padding: 10px 12px;
-  background-color: #6a0dad;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 14px;
+.dob-selects select {
+  width: 50%;
+  padding: 5px 1px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
 }
 
-.register-container {
-  margin-top: 30px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  border: 2px solid #6a0dad;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
+/* ======== Responsive Styles ======== */
 @media screen and (max-width: 768px) {
   .register-container {
     padding: 20px;
     margin-left: 12px;
     margin-right: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .first-name,
+  .last-name {
+    flex: 1 1 100%;
+  }
+
+  .register-container {
+    flex-direction: column;
+    padding: 20px;
   }
 }
