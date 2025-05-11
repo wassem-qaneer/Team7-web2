@@ -1,11 +1,15 @@
-<div class="container">
+<a routerLink="/" class="logo-link">
+  <img src="/logo.ico" alt="Logo" class="logo" />
+</a>
+
+<div class="container1">
   <div class="welcome-message">
     <h1>Welcome to Our Platform!</h1>
     <p>Choose your role to get started:</p>
   </div>
 
   <div class="buttons">
-    <button class="btn employee-btn">Login as Employee<a routerLink="employer-login"></a></button>
-    <button class="btn employer-btn">Login as Employer<a routerLink="job-seeker-login"></a></button>
+    <a routerLink="/employer-login" class="btn employee-btn">Login as Employer</a>
+    <a routerLink="/job-seeker-login" class="btn employer-btn">Login as Job Seeker</a>
   </div>
 </div>

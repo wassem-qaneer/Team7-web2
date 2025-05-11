@@ -1,0 +1,35 @@
+<div class="notifications">
+  <button class="dismiss-all" (click)="dismissAll()">Dismiss All</button>
+
+  <table *ngIf="notifications.length > 0; else noNotifications">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Local Time</th>
+        <th>Person</th>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let notification of notifications">
+        <td><input type="checkbox" /></td>
+        <td>{{ notification.localTime }}</td>
+        <td>{{ notification.person }}</td>
+        <td>{{ notification.company }}</td>
+        <td>
+          <strong>{{ notification.title }}</strong><br />
+          <a href="#">Show more</a>
+        </td>
+        <td>
+          <button class="dismiss-btn" (click)="dismissOne(notification.id)">Dismiss</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noNotifications>
+    <p>No notifications available.</p>
+  </ng-template>
+</div>

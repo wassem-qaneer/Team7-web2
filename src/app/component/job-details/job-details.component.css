@@ -1,0 +1,24 @@
+.btn-purple {
+    color: white;
+    background-color: #7c3aed;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .btn-purple:hover {
+    background-color: #5b21b6;
+  }
+  .job-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .job-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  

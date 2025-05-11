@@ -9,9 +9,9 @@ body {
   margin: 30px auto 30px auto;
   padding: 2rem;
   background-color: white;
-  border: 2px solid #d1c4e9;
+  border: 2px solid #6f42c1;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(133, 105, 183, 0.2);
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -27,7 +27,7 @@ h2 {
 }
 
 h3 {
-  color: #6a1b9a;
+  color: #6f42c1;
   margin-bottom: 12px;
 }
 
@@ -53,13 +53,13 @@ input, select {
 
 input:focus, select:focus {
   outline: none;
-  border-color: #ba68c8;
-  box-shadow: 0 0 4px #ba68c8;
+  border-color: #6f42c1;
+  box-shadow: 0 0 4px #6f42c1;
 }
 
 /* Button */
 button {
-  background-color: #8e24aa;
+  background-color: #6f42c1;
   color: white;
   padding: 12px;
   width: 100%;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-  background-color: #6a1b9a;
+  background-color: #5a32a3;
 }
 
 @media (max-width: 768px) {
@@ -106,7 +106,7 @@ button:hover {
 }
 
 .term-item a {
-  color: #6a0dad;
+  color: #6f42c1;
   font-weight: bold;
   text-decoration: none;
 }
@@ -121,7 +121,7 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-  background-color: #8e24aa;
+  background-color: #6f42c1;
   color: white;
   padding: 12px;
   border-radius: 8px;
@@ -135,7 +135,7 @@ input[type="file"] {
 }
 
 .custom-file-upload:hover {
-  background-color: #6a1b9a;
+  background-color: #5a32a3;
 }
 
 .login-link {
@@ -153,7 +153,7 @@ input[type="file"] {
 }
 
 .login-link a {
-  color: #6a0dad;
+  color: #6f42c1;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
@@ -164,7 +164,7 @@ input[type="file"] {
 }
 
 .footer-callout {
-  background: linear-gradient(20deg, #600d9b, #9b0bbf);
+  background: linear-gradient(20deg, #6f42c1, #6f42c1);
   color: white;
   padding: 50px 20px;
   text-align: center;

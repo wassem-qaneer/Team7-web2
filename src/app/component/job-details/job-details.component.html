@@ -1,0 +1,63 @@
+<div class="container mt-4 text-center">
+  
+  <!-- Job Image on Top -->
+  <div *ngIf="image" class="mb-4">
+    <img 
+      [src]="image" 
+      alt="Job Image" 
+      class="img-thumbnail img-fluid"
+      style="width: 320px; height: 200px; object-fit: cover;"
+    />
+  </div>
+  
+
+  <!-- Job Title -->
+  <h2 class="fw-bold">{{ title || 'Senior Product Designer' }}</h2>
+  <p class="text-muted">{{ company || 'Remotely - Full Time' }}</p>
+  <p>9249, 2010 Austin, TX, USA</p>
+
+  <!-- Description -->
+  <p class="mt-4">
+    In the heart of the vibrant city of Austin, our company has carved a niche for itself...
+  </p>
+
+  <hr />
+  
+  <h5 class="fw-bold">Job Description</h5>
+  <ul class="text-start mx-auto" style="max-width: 800px;">
+    <li>Lead the design process from ideation to implementation...</li>
+    <li>Conduct user research and testing...</li>
+    <li>Stay up-to-date with design trends...</li>
+  </ul>
+
+  <hr />
+  
+  <h5 class="fw-bold">Qualifications</h5>
+  <ul class="text-start mx-auto" style="max-width: 800px;">
+    <li>Experience as a Product Designer...</li>
+    <li>Proficiency in tools like Figma, Sketch...</li>
+  </ul>
+
+  <!-- Upload Form -->
+  <div class="mt-4 text-start mx-auto" style="max-width: 600px;">
+    <label class="form-label">Upload your CV</label>
+    <input type="file" class="form-control mb-3" (change)="onFileSelected($event, 'cv')" />
+
+    <label class="form-label">Upload your Cover Letter</label>
+    <input type="file" class="form-control mb-3" (change)="onFileSelected($event, 'cover')" />
+  </div>
+
+  <!-- Apply Button -->
+  <button 
+    class="btn btn-primary px-4 mt-3" 
+    style="background-color: #9c4de2; border: none;" 
+    (click)="apply()">
+    Apply Now
+  </button>
+
+  <!-- Thank you message -->
+  <div *ngIf="applicationSubmitted" class="alert alert-success mt-4 w-50 mx-auto">
+    Thank you for applying to this job!
+  </div>
+
+</div>

@@ -1,0 +1,79 @@
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9, #btn10, #btn11 {
+  background-color: #7930d8;
+  border-color: #7930d8;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover, #btn11:hover {
+  background-color: #5a22a8 !important;
+  border-color: #5a22a8 !important;
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover, #btn11:hover {
+  transition: background-color 0.3s ease, border-color 0.3s ease !important;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+.table-responsive-md {
+  width: 100%;
+}
+
+.table {
+  margin-top: 1rem;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.action-btn {
+  min-width: 6rem;
+  text-align: center;
+}
+
+#button-addon2 {
+  color: #7930d8;
+  background-color: #f7f2fd;
+  border-color: #f7f2fd;
+}
+
+#button-addon2:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+#Delete1, #Delete2, #Delete3, #Delete4, #Delete5, #reject1, #reject2, #reject3 {
+  border-color: #7930d8;
+  color: #7930d8;
+}
+
+#Delete1:hover, #Delete2:hover, #Delete3:hover, #Delete4:hover, #Delete5:hover, #reject1:hover, #reject2:hover, #reject3:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+#accept1, #accept2, #accept3 {
+  color: #7930d8;
+  background-color: #f7f2fd;
+  border-color: #f7f2fd;
+}
+
+#accept1:hover, #accept2:hover, #accept3:hover {
+  background-color: #7930d8;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .form-select {
+    max-width: 100%;
+  }
+
+  .action-btn button {
+    width: 100%;
+    margin: 2px 0;
+  }
+}

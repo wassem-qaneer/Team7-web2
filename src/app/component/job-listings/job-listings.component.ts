@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-job-listings',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule],
   templateUrl: './job-listings.component.html',
 })
 export class JobListingsComponent {
@@ -13,21 +12,21 @@ export class JobListingsComponent {
     {
       title: 'Frontend Developer',
       company: 'TechCorp',
-      location: 'Nablus, palestine',
+      location: 'Nablus, Palestine',
       type: 'Full-Time',
-      image: 'https://c8.alamy.com/comp/MP6D15/job-opening-front-end-developer-3d-MP6D15.jpg',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
     },
     {
       title: 'Backend Engineer',
       company: 'CodeMasters',
-      location: 'Amman, Jordan',
+      location: 'jordan, Amman',
       type: 'Part-Time',
       image: 'https://newline.tech/wp-content/uploads/2023/07/Profession_-Backend-Developer.png',
     },
     {
       title: 'UI/UX Designer',
       company: 'DesignPro',
-      location: 'DOHA, Qatar',
+      location: 'Dubai, UAE',
       type: 'Contract',
       image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
     },
@@ -36,12 +35,12 @@ export class JobListingsComponent {
       company: 'AppZone',
       location: 'Cairo, Egypt',
       type: 'Full-Time',
-      image: 'https://www.shutterstock.com/image-photo/panorama-shot-frontend-developer-team-600nw-2304027635.jpg',
+      image: 'https://www.shutterstock.com/shutterstock/photos/1717584028/display_1500/stock-photo-ai-artificial-intelligence-concept-deep-learning-gui-graphical-user-interface-1717584028.jpg',
     },
     {
       title: 'Project Manager',
       company: 'ManageIt',
-      location: 'Ramallah, Palestine',
+      location: 'Milano,italy',
       type: 'Full-Time',
       image: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80',
     },
@@ -50,7 +49,7 @@ export class JobListingsComponent {
       company: 'DataWiz',
       location: 'Beirut, Lebanon',
       type: 'Remote',
-      image: 'https://thumbs.dreamstime.com/b/data-analyst-african-woman-using-spreadsheet-data-analyst-african-woman-using-spreadsheet-computer-222255910.jpg',
+      image: 'https://assets.datamation.com/uploads/2024/01/dm_20240124-data-analytics-techniques.png',
     },
   ];
 
@@ -61,12 +60,11 @@ export class JobListingsComponent {
   }
 
   showMoreJobs() {
-      this.visibleJobs = this.allJobs.length;
-    }
-    showLessJobs() {
-      this.visibleJobs = 3;
-    }
-
-
+    this.visibleJobs = this.allJobs.length;
   }
+  showLessJobs() {
+    this.visibleJobs = 3;
+  }
+
+}
 
