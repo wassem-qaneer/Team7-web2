@@ -3,6 +3,7 @@
     <h1>Post a new job</h1>
     <p>Fill in the details below to create your job post.</p>
 
+
     <h6>Job Title</h6>
     <div class="form-floating mb-3">
       <input
@@ -20,6 +21,7 @@
         Job title is required.
       </div>
     </div>
+
 
     <h6>Job Description</h6>
     <div class="form-floating">
@@ -42,6 +44,7 @@
       </div>
     </div>
     <h6 style="opacity: 70%; margin-top: 10px">{{ numOfEnteredWord }}/{{ maxWords }}</h6>
+
 
     <h6 style="margin-top: 25px">Requirements</h6>
     <div class="form-check" *ngFor="let req of ['Bachelor\'s Degree', 'Master\'s Degree', 'PhD', 'Certificate']">
@@ -68,6 +71,7 @@
         Custom requirement is required.
       </div>
     </div>
+
 
     <h6 style="margin-top: 20px">Salary</h6>
     <div class="fourInputs" style="display: flex; gap: 20px">
@@ -154,12 +158,33 @@
       </div>
     </div>
 
+
+    <h6 style="margin-top: 20px">Job Type</h6>
+    <div class="form-floating mb-3">
+      <input
+        class="form-control"
+        placeholder="Job Type"
+        name="jobType"
+        [(ngModel)]="jobType"
+        required
+        #jobTypeInput="ngModel"
+        [ngClass]="{ 'is-invalid': jobTypeInput.invalid && jobTypeInput.touched }"
+      />
+      <label style="opacity: 50%">Add a Job Type (Full-Time / Part-Time)</label>
+      <div class="text-danger small" *ngIf="jobTypeInput.invalid && jobTypeInput.touched">
+        Job Type is required.
+      </div>
+    </div>
+
+
+
     <h6 style="margin-top: 20px">Upload Company Logo</h6>
     <input type="file" #logoInput accept="image/png, image/jpeg, image/gif" style="display: none;" (change)="onLogoSelected($event)" />
     <div class="d-grid gap-2" style="margin-top: 10px">
       <button class="btn btn-primary" (click)="logoInput.click()" type="button">Upload</button>
     </div>
     <h6 style="opacity: 70%;margin-top: 10px">JPG, PNG, GIF (Max 2MB)</h6>
+
 
     <h6 style="margin-top: 20px">Upload Related Documents</h6>
     <input type="file" #docInput accept=".pdf,.doc,.docx,.ppt,.pptx" style="display: none;" (change)="onDocSelected($event)" />
@@ -168,8 +193,9 @@
     </div>
     <h6 style="opacity: 70%;margin-top: 10px;margin-bottom: 100px">PDF, DOC, PPT (Max 5MB)</h6>
 
+
     <div class="d-grid gap-2 mt-3 mb-5">
-      <button class="btn btn-success" type="submit" >Submit</button>
+      <button class="btn btn-success" type="submit">Submit</button>
     </div>
   </form>
 </div>
