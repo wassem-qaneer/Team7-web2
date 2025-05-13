@@ -24,11 +24,12 @@
         <th>Company</th>
         <th>Employee Name</th>
         <th>Job Status</th>
-        <th style="text-align: center">Actions</th>
+        <th style="text-align: center;" colspan="2">Actions</th>
+
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor ="let job of filteredJobPostings">
+      <tr *ngFor="let job of filteredJobPostings">
         <td>{{ job.id }}</td>
         <td>{{ job.title }}</td>
         <td>{{ job.company }}</td>
@@ -39,8 +40,9 @@
             <option value="Close">Close</option>
           </select>
         </td>
-        <td style="text-align: center">
+        <td style="text-align: center; display: flex; justify-content:space-evenly">
           <button type="button" class="btn btn-outline-primary" id="Delete{{job.id}}" (click)="deleteJob(job.id)">Delete</button>
+          <button type="button" class="btn btn-outline-primary" id="Approve{{job.id}}">Approve</button>
         </td>
       </tr>
       </tbody>

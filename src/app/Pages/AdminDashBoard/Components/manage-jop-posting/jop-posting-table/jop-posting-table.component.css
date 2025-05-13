@@ -46,12 +46,12 @@ th, td {
   color: white;
 }
 
-#Delete1, #Delete2, #Delete3, #Delete4, #Delete5, #reject1, #reject2, #reject3 {
+#Delete1, #Delete2, #Delete3, #Delete4, #Delete5, #Approve1, #Approve2, #Approve3, #Approve4, #Approve5, #reject1, #reject2, #reject3 {
   border-color: #7930d8;
   color: #7930d8;
 }
 
-#Delete1:hover, #Delete2:hover, #Delete3:hover, #Delete4:hover, #Delete5:hover, #reject1:hover, #reject2:hover, #reject3:hover {
+#Delete1:hover, #Delete2:hover, #Delete3:hover, #Delete4:hover, #Delete5:hover, #Approve1:hover, #Approve2:hover, #Approve3:hover, #Approve4:hover, #Approve5:hover, #reject1:hover, #reject2:hover, #reject3:hover {
   background-color: #7930d8;
   color: white;
 }
