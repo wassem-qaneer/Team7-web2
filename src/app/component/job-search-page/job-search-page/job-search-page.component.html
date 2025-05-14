@@ -1,0 +1,72 @@
+<div class="d-flex" style="height: 100vh; background-color: #f9f9f9;">
+
+
+<div class="d-none d-md-block" style="width: 220px; background-color: white; padding: 20px; border-right: 1px solid #ddd; height: 100vh; overflow-y: auto;">
+  <app-sidebar-filters></app-sidebar-filters>
+</div>
+
+<button class="btn btn-purple d-md-none mb-3 ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile" aria-controls="sidebarMobile">
+  Filters
+</button>
+
+<div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarMobile" aria-labelledby="sidebarMobileLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarMobileLabel">Filters</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <app-sidebar-filters></app-sidebar-filters>
+  </div>
+</div>
+
+
+  <div class="flex-grow-1 p-4" style="overflow-y: auto;">
+    <app-job-list></app-job-list>
+  </div>
+
+  <div style="width: 280px; background-color: white; padding: 20px; border-left: 1px solid #ddd;">
+    <h6>Search</h6>
+    <input type="text" class="form-control mb-4" placeholder="Search...">
+
+    <div class="mb-4">
+      <h6>Category</h6>
+      <div><input type="checkbox" id="design"> <label for="design">Design</label></div>
+      <div><input type="checkbox" id="dev"> <label for="dev">Development</label></div>
+      <div><input type="checkbox" id="marketing"> <label for="marketing">Marketing</label></div>
+      <div><input type="checkbox" id="sales"> <label for="sales">Sales</label></div>
+    </div>
+
+    <div class="mb-4">
+      <h6>Company Size</h6>
+      <div><input type="checkbox" name="size"> 1-10</div>
+      <div><input type="checkbox" name="size"> 11-50</div>
+      <div><input type="checkbox" name="size"> 51-200</div>
+      <div><input type="checkbox" name="size"> 200+</div>
+    </div>
+
+    <div class="mb-4">
+      <h6>Experience Level</h6>
+      <div><input type="checkbox"> Fresher</div>
+      <div><input type="checkbox"> Junior</div>
+      <div><input type="checkbox"> Mid-Level</div>
+      <div><input type="checkbox"> Senior</div>
+    </div>
+
+    <div class="mb-4">
+      <h6>Job Type</h6>
+      <div><input type="checkbox"> Full Time</div>
+      <div><input type="checkbox"> Part Time</div>
+      <div><input type="checkbox"> Contract</div>
+      <div><input type="checkbox"> Internship</div>
+    </div>
+
+    <div class="mb-2">
+      <h6>Salary Range</h6>
+      <input type="range" class="form-range" min="0" max="100000" value="0">
+      <div class="d-flex justify-content-between">
+        <span>0</span><span>100k+</span>
+      </div>
+    </div>
+  </div>
+
+</div>

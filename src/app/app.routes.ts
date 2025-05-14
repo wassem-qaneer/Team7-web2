@@ -8,16 +8,14 @@ import { Error404Component } from './component/error-404/error-404.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { JobManagementDashboardComponent } from './Pages/EmpolyerDashboard/job-management-dashboard/job-management-dashboard.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { JobSearchPageComponent } from './Pages/job-search-page/job-search-page.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { SignupComponent } from './Pages/signup/signup.component';
-import {SideBarComponent} from './Pages/AdminDashBoard/Components/side-bar/side-bar.component';
-import {AnalyticsComponent} from './Pages/AdminDashBoard/Components/analytics/analytics.component';
-import {
-  ManageJopPostingComponent
-} from './Pages/AdminDashBoard/Components/manage-jop-posting/manage-jop-posting.component';
-import {ReportsComponent} from './Pages/AdminDashBoard/Components/reports/reports.component';
-import {ManageUsersComponent} from './Pages/AdminDashBoard/Components/manage-users/manage-users.component';
-
+import { SideBarComponent } from './Pages/AdminDashBoard/Components/side-bar/side-bar.component';
+import { AnalyticsComponent } from './Pages/AdminDashBoard/Components/analytics/analytics.component';
+import { ManageJopPostingComponent } from './Pages/AdminDashBoard/Components/manage-jop-posting/manage-jop-posting.component';
+import { ReportsComponent } from './Pages/AdminDashBoard/Components/reports/reports.component';
+import { ManageUsersComponent } from './Pages/AdminDashBoard/Components/manage-users/manage-users.component';
 import { JobChartComponent } from './component/job-chart/job-chart.component';
 import { NotificationsComponent } from './component/notifications/notifications.component';
 import { PostNewJobComponent } from './Pages/JobPostPage/post-new-job/post-new-job.component';
@@ -36,22 +34,15 @@ export const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  {
-    path: 'JobManagementDashboard',
-    component: JobManagementDashboardComponent,
-  },
-
+  { path: 'JobManagementDashboard', component: JobManagementDashboardComponent },
   { path: 'postNewJob', component: PostNewJobComponent },
-  {path: 'Analytics' ,component:AnalyticsComponent},
-  {path: 'ManageJopPosting' ,component:ManageJopPostingComponent},
-  {path: 'ManageUsers' ,component:ManageUsersComponent},
-  {path: 'Reports' ,component:ReportsComponent},
-
-
-
+  { path: 'jobs', component: JobSearchPageComponent },
+  { path: 'Analytics', component: AnalyticsComponent },
+  { path: 'ManageJopPosting', component: ManageJopPostingComponent },
+  { path: 'ManageUsers', component: ManageUsersComponent },
+  { path: 'Reports', component: ReportsComponent },
   { path: 'noto', component: NotificationsComponent },
   { path: 'JobChartComponent', component: JobChartComponent },
-
   { path: '**', component: Error404Component },
 ];
 
