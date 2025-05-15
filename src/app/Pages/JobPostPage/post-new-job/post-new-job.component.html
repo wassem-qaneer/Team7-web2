@@ -2,7 +2,6 @@
   <form #jobForm="ngForm" (ngSubmit)="onSubmit(jobForm)">
     <h1>Post a new job</h1>
     <p>Fill in the details below to create your job post.</p>
-
     <h6>Job Title</h6>
     <div class="form-floating mb-3">
       <input
@@ -19,29 +18,53 @@
       <div class="text-danger small" *ngIf="jobTitleInput.invalid && jobTitleInput.touched">
         Job title is required.
       </div>
-    </div>
+<h6>Job Description</h6>
+<div class="form-floating">
+  <textarea
+    class="form-control"
+    placeholder="Leave a comment here"
+    id="floatingTextarea2"
+    style="height: 100px"
+    name="jobDescription"
+    [(ngModel)]="jobDescription"
+    required
+    #descInput="ngModel"
+    (input)="countWords()"
+    [disabled]="numOfEnteredWord >= maxWords"
+    [ngClass]="{ 'is-invalid': descInput.invalid && descInput.touched }"
+  ></textarea>
+  <label for="floatingTextarea2" style="opacity: 50%">Job Description</label>
+  <div class="text-danger small" *ngIf="descInput.invalid && descInput.touched">
+    Description is required.
+  </div>
+</div>
+<h6 style="opacity: 70%; margin-top: 10px">{{ numOfEnteredWord }}/{{ maxWords }}</h6>
 
-    <h6>Job Description</h6>
-    <div class="form-floating">
-      <textarea
-        class="form-control"
-        placeholder="Leave a comment here"
-        id="floatingTextarea2"
-        style="height: 100px"
-        name="jobDescription"
-        [(ngModel)]="jobDescription"
-        required
-        #descInput="ngModel"
-        (input)="countWords()"
-        [disabled]="numOfEnteredWord >= maxWords"
-        [ngClass]="{ 'is-invalid': descInput.invalid && descInput.touched }"
-      ></textarea>
-      <label for="floatingTextarea2" style="opacity: 50%">Job Description</label>
-      <div class="text-danger small" *ngIf="descInput.invalid && descInput.touched">
-        Description is required.
-      </div>
     </div>
     <h6 style="opacity: 70%; margin-top: 10px">{{ numOfEnteredWord }}/{{ maxWords }}</h6>
+
+<h6>Job Description</h6>
+<div class="form-floating">
+  <textarea
+    class="form-control"
+    placeholder="Leave a comment here"
+    id="floatingTextarea2"
+    style="height: 100px"
+    name="jobDescription"
+    [(ngModel)]="jobDescription"
+    required
+    #descInput="ngModel"
+    (input)="countWords()"
+    [disabled]="numOfEnteredWord >= maxWords"
+    [ngClass]="{ 'is-invalid': descInput.invalid && descInput.touched }"
+  ></textarea>
+  <label for="floatingTextarea2" style="opacity: 50%">Job Description</label>
+  <div class="text-danger small" *ngIf="descInput.invalid && descInput.touched">
+    Description is required.
+  </div>
+</div>
+<h6 style="opacity: 70%; margin-top: 10px">{{ numOfEnteredWord }}/{{ maxWords }}</h6>
+
 
     <h6 style="margin-top: 25px">Requirements</h6>
     <div class="form-check" *ngFor="let req of ['Bachelor\'s Degree', 'Master\'s Degree', 'PhD', 'Certificate']">
@@ -136,30 +159,103 @@
       </div>
     </div>
 
+    <h6 style="margin-top: 20px">Salary</h6>
+    <div class="fourInputs" style="display: flex; gap: 20px">
+      <div class="form-floating mb-1" style="width: 40%">
+        <input
+          class="form-control"
+          placeholder="Salary"
+          name="salary"
+          [(ngModel)]="salary"
+          required
+          #salaryInput="ngModel"
+          [ngClass]="{ 'is-invalid': salaryInput.invalid && salaryInput.touched }"
+        />
+        <label style="opacity: 50%">Add a salary figure</label>
+        <div class="text-danger small" *ngIf="salaryInput.invalid && salaryInput.touched">
+          Salary is required.
+        </div>
+      </div>
 
-    <h6 style="margin-top: 20px">Location</h6>
-    <div class="form-floating mb-3">
-      <input
-        class="form-control"
-        placeholder="Location"
-        name="location"
-        [(ngModel)]="location"
-        required
-        #locationInput="ngModel"
-        [ngClass]="{ 'is-invalid': locationInput.invalid && locationInput.touched }"
-      />
-      <label style="opacity: 50%">Add a location</label>
-      <div class="text-danger small" *ngIf="locationInput.invalid && locationInput.touched">
-        Location is required.
+      <div class="form-floating mb-1">
+        <input
+          class="form-control"
+          placeholder="Frequency"
+          name="frequency"
+          [(ngModel)]="frequency"
+          required
+          #freqInput="ngModel"
+          [ngClass]="{ 'is-invalid': freqInput.invalid && freqInput.touched }"
+        />
+        <label style="opacity: 50%">Frequency</label>
+        <div class="text-danger small" *ngIf="freqInput.invalid && freqInput.touched">
+          Frequency is required.
+        </div>
+      </div>
+
+      <div class="form-floating mb-1">
+        <input
+          class="form-control"
+          placeholder="Type"
+          name="type"
+          [(ngModel)]="type"
+          required
+          #typeInput="ngModel"
+          [ngClass]="{ 'is-invalid': typeInput.invalid && typeInput.touched }"
+        />
+        <label style="opacity: 50%">Type</label>
+        <div class="text-danger small" *ngIf="typeInput.invalid && typeInput.touched">
+          Type is required.
+        </div>
+      </div>
+
+      <div class="form-floating mb-1">
+        <input
+          class="form-control"
+          placeholder="Currency"
+          name="currency"
+          [(ngModel)]="currency"
+          required
+          #currencyInput="ngModel"
+          [ngClass]="{ 'is-invalid': currencyInput.invalid && currencyInput.touched }"
+        />
+        <label style="opacity: 50%">Currency</label>
+        <div class="text-danger small" *ngIf="currencyInput.invalid && currencyInput.touched">
+          Currency is required.
+        </div>
       </div>
     </div>
 
-    <h6 style="margin-top: 20px">Upload Company Logo</h6>
-    <input type="file" #logoInput accept="image/png, image/jpeg, image/gif" style="display: none;" (change)="onLogoSelected($event)" />
-    <div class="d-grid gap-2" style="margin-top: 10px">
-      <button class="btn btn-primary" (click)="logoInput.click()" type="button">Upload</button>
-    </div>
-    <h6 style="opacity: 70%;margin-top: 10px">JPG, PNG, GIF (Max 2MB)</h6>
+<h6 style="margin-top: 20px">Location</h6>
+<div class="form-floating mb-3">
+  <input
+    class="form-control"
+    placeholder="Location"
+    name="location"
+    [(ngModel)]="location"
+    required
+    #locationInput="ngModel"
+    [ngClass]="{ 'is-invalid': locationInput.invalid && locationInput.touched }"
+  />
+  <label style="opacity: 50%">Add a location</label>
+  <div class="text-danger small" *ngIf="locationInput.invalid && locationInput.touched">
+    Location is required.
+  </div>
+</div>
+
+<h6 style="margin-top: 20px">Upload Company Logo</h6>
+<input
+  type="file"
+  #logoInput
+  accept="image/png, image/jpeg, image/gif"
+  style="display: none;"
+  (change)="onLogoSelected($event)"
+/>
+<div class="d-grid gap-2" style="margin-top: 10px">
+  <button class="btn btn-primary" (click)="logoInput.click()" type="button">Upload</button>
+</div>
+<h6 style="opacity: 70%; margin-top: 10px">JPG, PNG, GIF (Max 2MB)</h6>
+
 
     <h6 style="margin-top: 20px">Upload Related Documents</h6>
     <input type="file" #docInput accept=".pdf,.doc,.docx,.ppt,.pptx" style="display: none;" (change)="onDocSelected($event)" />
@@ -168,8 +264,55 @@
     </div>
     <h6 style="opacity: 70%;margin-top: 10px;margin-bottom: 100px">PDF, DOC, PPT (Max 5MB)</h6>
 
-    <div class="d-grid gap-2 mt-3 mb-5">
-      <button class="btn btn-success" type="submit" >Submit</button>
+<h6 style="margin-top: 20px">Job Type</h6>
+<div class="form-floating mb-3">
+  <input
+    class="form-control"
+    placeholder="Job Type"
+    name="jobType"
+    [(ngModel)]="jobType"
+    required
+    #jobTypeInput="ngModel"
+    [ngClass]="{ 'is-invalid': jobTypeInput.invalid && jobTypeInput.touched }"
+  />
+  <label style="opacity: 50%">Add a Job Type (Full-Time / Part-Time)</label>
+  <div class="text-danger small" *ngIf="jobTypeInput.invalid && jobTypeInput.touched">
+    Job Type is required.
+  </div>
+</div>
+
+<h6 style="margin-top: 20px">Upload Company Logo</h6>
+<input
+  type="file"
+  #logoInput
+  accept="image/png, image/jpeg, image/gif"
+  style="display: none;"
+  (change)="onLogoSelected($event)"
+/>
+<div class="d-grid gap-2" style="margin-top: 10px">
+  <button class="btn btn-primary" (click)="logoInput.click()" type="button">Upload</button>
+</div>
+<h6 style="opacity: 70%; margin-top: 10px">JPG, PNG, GIF (Max 2MB)</h6>
+
+<h6 style="margin-top: 20px">Upload Related Documents</h6>
+<input
+  type="file"
+  #docInput
+  accept=".pdf,.doc,.docx,.ppt,.pptx"
+  style="display: none;"
+  (change)="onDocSelected($event)"
+/>
+<div class="d-grid gap-2" style="margin-top: 10px">
+  <button class="btn btn-primary" (click)="docInput.click()" type="button">Upload</button>
+</div>
+<h6 style="opacity: 70%; margin-top: 10px; margin-bottom: 100px">
+  PDF, DOC, PPT (Max 5MB)
+</h6>
+
+<div class="d-grid gap-2 mt-3 mb-5">
+  <button class="btn btn-success" type="submit">Submit</button>
+</div>
+
     </div>
   </form>
 </div>

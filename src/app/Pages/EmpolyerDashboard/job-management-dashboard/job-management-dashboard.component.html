@@ -254,6 +254,8 @@
         <th>Applicant name</th>
         <th>Position applied</th>
         <th>Application status</th>
+        <th>CV</th>
+        <th>Cover Letter</th>
         <th colspan="2" style="text-align: center">Actions</th>
       </tr>
       </thead>
@@ -262,6 +264,8 @@
         <td>{{ app.applicantName }}</td>
         <td>{{ app.position }}</td>
         <td style="color: #7930d8">{{ app.status }}</td>
+        <td>{{ app.cv }}</td>
+        <td>{{ app.coverLetter }}</td>
         <td style="display: flex; gap: 20px; justify-content: center">
           <button type="button" class="btn btn-outline-primary" id="accept{{i+1}}" (click)="updateApplicationStatus(app, 'Accepted')">Accept</button>
           <button type="button" class="btn btn-outline-primary" id="reject{{i+1}}" (click)="updateApplicationStatus(app, 'Rejected')">Reject</button>

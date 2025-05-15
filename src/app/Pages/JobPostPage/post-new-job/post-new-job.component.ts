@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {NgClass, NgForOf, NgIf} from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgClass, NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-post-new-job',
   templateUrl: './post-new-job.component.html',
   styleUrl: './post-new-job.component.css',
+  standalone: true,
   imports: [
     FormsModule,
     NgClass,
@@ -24,6 +25,7 @@ export class PostNewJobComponent {
   type: string = '';
   currency: string = '';
   location: string = '';
+  jobType: string = '';
 
   numOfEnteredWord: number = 0;
   maxWords: number = 500;
@@ -65,8 +67,4 @@ export class PostNewJobComponent {
       console.log('Document file selected:', file.name);
     }
   }
-
-
-
-
 }

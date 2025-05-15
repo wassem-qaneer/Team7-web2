@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-side-bar',
-  imports: [
-    RouterLink
-  ],
+  standalone: true,
+  imports: [RouterLink, NgClass],
   templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css'
+  styleUrls: ['./side-bar.component.css']
 })
-export class SideBarComponent {
-
-}
+export class SideBarComponent {}
