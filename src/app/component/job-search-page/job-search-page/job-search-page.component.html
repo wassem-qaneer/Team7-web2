@@ -62,10 +62,23 @@
 
     <div class="mb-2">
       <h6>Salary Range</h6>
-      <input type="range" class="form-range" min="0" max="100000" value="0">
+
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="100000"
+        value="0"
+        (input)="updateSlider($event)">
+
+      <div class="text-end text-muted mt-1">
+        Selected: {{ salaryValue | number }} $
+      </div>
+
       <div class="d-flex justify-content-between">
         <span>0</span><span>100k+</span>
       </div>
+
     </div>
   </div>
 

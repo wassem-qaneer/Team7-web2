@@ -7,7 +7,7 @@ import { EmployerBenefitsComponent } from "./components/employer-benefits/employ
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
